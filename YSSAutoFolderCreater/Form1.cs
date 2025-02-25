@@ -25,14 +25,15 @@ namespace YSSAutoFolderCreater
             string aracPlakasi = textBox_plaka.Text;
             string yuklemeTarihi = dateTimePicker1.Value.ToString("dd-MM-yyyy");
 
-            //klasör adı oluştur
+            //klasör adı oluştur, Kendi test sunucuma dosyaları oluşturdum. şayet bilgisayarınızdaki masaüstüne oluşturmak için aşağıdaki kod ile değişim yapmalısınız.
+            //string klasorYolu = Path.Combine(Environment.SpecialFolder.Desktop, klasorAdi); (doğruluğunu denemedim sadece teorik bilgi)
             string klasorAdi = $"{faturaNumarasi} - {aracPlakasi} - {yuklemeTarihi}";
-            string klasorYolu = Path.Combine(@"\\172.16.0.22\yukleme kayitlari", klasorAdi);
+            string klasorYolu = Path.Combine(@"\\192.168.1.5\yukleme kayitlari", klasorAdi);
 
 
-            // 2. klasör oluşturma
-            string klasoriki = "YÜKLEME GÖRSEL ve VİDEOLARI";
-            string klasorikiyol = Path.Combine(@"\\172.16.0.22\yukleme kayitlari\$klasorAdi\");
+            // Oluşturduğumuz klasörün içine yeni bir klasör oluşturmak için yazdıma ancak bu alan eksik kalmış olup bir boş vaktimde uğraşacağım için comment olarak yazdım
+           // string klasoriki = "YÜKLEME GÖRSEL ve VİDEOLARI";
+            //string klasorikiyol = Path.Combine(@"\\192.168.1.5\yukleme kayitlari\$klasorAdi\");
             try
             {
                 // Klasörü oluştur
